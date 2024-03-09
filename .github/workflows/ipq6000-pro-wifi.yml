@@ -10,8 +10,8 @@ name: ipq6000-pro-wifi
 
 on: 
   repository_dispatch:
-  release:
-    types: [published]
+  # release:
+  #   types: [published]
 
   #push:
     #branches: 
@@ -20,7 +20,6 @@ on:
   #watch:
    #types: [started]
   
-
 jobs:
   build:
     runs-on: ubuntu-latest
