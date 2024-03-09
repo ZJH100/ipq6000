@@ -9,15 +9,13 @@
 name: ipq6000-pro-wifi
 
 on: 
+  repository_dispatch:
   release:
     types: [published]
 
   #push:
     #branches: 
       #- master
-
-  schedule:
-    - cron: 0 20 1 * *
   
   #watch:
    #types: [started]
