@@ -85,13 +85,12 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
+        sed -i 's/sdf8057\/packages\.git;2023/coolsnowwolf\/packages/g' feeds.conf.default
         ./scripts/feeds update -a
         pushd feeds/packages/lang
         # rm -fr golang && svn co https://github.com/openwrt/packages/trunk/lang/golang
         popd
-        ./scripts/feeds install -a
-        ./scripts/feeds install -a
-        
+        ./scripts/feeds install -a        
         
     #- name: openclash Install rely
       #run: |
