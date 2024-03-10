@@ -85,7 +85,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        sed -i 's/sdf8057\/packages\.git;2023/coolsnowwolf\/packages/g' feeds.conf.default
+        sed -i 's/sdf8057\/packages\.git;2023/ZJH100\/packages/g' feeds.conf.default
         ./scripts/feeds update -a
         pushd feeds/packages/lang
         # rm -fr golang && svn co https://github.com/openwrt/packages/trunk/lang/golang
